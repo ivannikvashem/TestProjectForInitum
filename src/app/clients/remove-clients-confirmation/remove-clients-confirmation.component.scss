@@ -1,0 +1,15 @@
+::ng-deep .mdc-dialog .mdc-dialog__content {
+  padding: 40px 34px 0 34px !important
+}
+
+::ng-deep .mdc-dialog__actions {
+  padding: 26px 34px;
+}
+
+.message-container {
+  height: 120px;
+}
+
+button:not(:last-child) {
+  margin-right: 5px;
+}

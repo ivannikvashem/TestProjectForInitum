@@ -1,0 +1,25 @@
+mat-form-field {
+  display: block;
+  margin-top: 15px;
+}
+
+h4 {
+  font-weight: bold;
+}
+
+::ng-deep .mdc-dialog .mdc-dialog__content {
+  padding: 20px 34px 0 34px !important;
+}
+
+::ng-deep .mdc-dialog__actions {
+  padding: 26px 34px;
+}
+
+button:not(:last-child) {
+  margin-right: 5px;
+}
+
+.mat-mdc-form-field-error {
+  font-size: 12px;
+  text-align: end;
+}

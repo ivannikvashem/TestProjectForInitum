@@ -1,0 +1,34 @@
+<mat-dialog-content>
+  <form [formGroup]="clientForm">
+    <h2 class="modal-header-text">{{data ? 'Редактирование': 'Новый клиент'}}</h2>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Имя</mat-label>
+      <input formControlName="name" matInput placeholder="Имя">
+      <mat-error *ngIf="clientForm.controls['name'].invalid">Минимальное количество символов: 2</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Фамилия</mat-label>
+      <input formControlName="surname" matInput placeholder="Фамилия">
+      <mat-error *ngIf="clientForm.controls['surname'].invalid">Минимальное количество символов: 2</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>E-mail</mat-label>
+      <input formControlName="email" matInput placeholder="E-mail">
+      <mat-error *ngIf="clientForm.controls['email'].invalid">Некорректный адрес</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Телефон</mat-label>
+      <input formControlName="phone" matInput placeholder="Телефон">
+      <mat-error *ngIf="clientForm.controls['phone'].invalid">Некорректный номер телефона</mat-error>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button class="cancel-btn" (click)="onCancel()">Отмена</button>
+  <button class="action-btn" [disabled]="!clientForm.valid" [mat-dialog-close]="clientForm.value">Сохранить</button>
+</mat-dialog-actions>

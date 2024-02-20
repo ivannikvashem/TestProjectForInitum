@@ -1,0 +1,42 @@
+.buttons-container {
+  padding: 8px 0 0 20px;
+}
+
+.mat-column-checkbox {
+  width: 30px !important;
+}
+
+.mat-column-email {
+  width: 15%;
+  text-align: end;
+}
+
+.mat-column-phone {
+  text-align: end;
+}
+
+mat-icon:not(:last-child) {
+  margin-right: 15px;
+}
+
+.mat-mdc-header-cell {
+  color:var(--table-cell-header-color);
+  font-weight: bold;
+}
+
+.mdc-data-table__cell:not(:last-child), .mdc-data-table__header-cell:not(:last-child) {
+  padding: 0 0 0 16px;
+}
+
+.client-name-field {
+  cursor: pointer;
+  &:hover {
+    color: #3164cb;
+    text-decoration: underline;
+  }
+}
+
+cdk-virtual-scroll-viewport {
+  height: 100%;
+  overflow: auto;
+}

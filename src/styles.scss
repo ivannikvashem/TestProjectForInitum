@@ -1,1 +1,189 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined");
+@import url("@angular/material/prebuilt-themes/indigo-pink.css");
+
+
+:root {
+  --action-button-default-color: #2f67d5;
+  --action-button-hover-color: #3c7cf8;
+  --action-button-pressed-color: #194eb6;
+  --action-button-disabled-color: #d8dee9;
+  --action-button-font-color: #ffffff;
+
+  --action-icon-button-default-color: #fffff;
+  --action-icon-button-hover-color: #e2eeff;
+  --action-icon-button-pressed-color: #b5d3ff;
+  --action-icon-button-disabled-color: #fffff;
+  --action-icon-button-disabled-font-color: #a8b0bf;
+  --action-icon-button-font-color: #304879;
+
+  --cancel-button-default-color: #ffffff;
+  --cancel-button-hover-color: #ebf1fe;
+  --cancel-button-pressed-color: #d1dcf0;
+  --cancel-button-font-color: #386ed7;
+
+  --body-background-color: #e9f3ff;
+  --page-title-color: #4089d8;
+  --page-background-color: white;
+
+  --table-cell-header-color: #2f4c97;
+
+  --checkbox-unselected-color: #dadada;
+  --checkbox-indeterminate-color: #4a95f7;
+  --checkbox-selected-color: #4a95f7;
+
+  --form-field-outline-color: #8db5ec;
+}
+
+* {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+html, body {
+  height: 90%;
+}
+
+body {
+  background-color: var(--body-background-color);
+  padding: 0 10px 20px 10px;
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: transparent;
+  border: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: #d3d1d1;
+}
+
+.page-title {
+  color: var(--page-title-color);
+  margin-left: 8px;
+  font-size: 30px;
+}
+
+.page-content {
+  background-color: var(--page-background-color);
+  border-radius: 20px;
+  border: none;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+
+}
+
+.mat-mdc-dialog-container .mdc-dialog__surface {
+  border-radius: 20px !important;
+}
+
+.action-btn {
+  color: var(--action-button-font-color);
+  border-radius: 20px;
+  border: 0;
+  min-height: 20px;
+  padding: 12px 22px;
+
+  background-color: var(--action-button-default-color);
+
+  &:hover {
+    background-color: var(--action-button-hover-color);
+  }
+
+  &:active {
+    background-color: var(--action-button-pressed-color);
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:disabled {
+    background-color: var(--action-button-disabled-color);
+  }
+}
+
+.action-icon-btn {
+  color: var(--action-icon-button-font-color);
+  background-color: var(--action-icon-button-default-color);
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 4px;
+
+  &:hover {
+    background-color: var(--action-icon-button-hover-color);
+  }
+
+  &:active {
+    background-color: var(--action-icon-button-pressed-color);
+  }
+}
+
+.disabled-icon-btn {
+  background-color: var(--action-icon-button-default-color);
+  color: var(--action-icon-button-disabled-font-color);
+  &:hover {
+    background-color: transparent;
+  }
+
+  &:active {
+    background-color: transparent;
+  }
+}
+
+.cancel-btn {
+  color: var(--cancel-button-font-color);
+  border-radius: 20px;
+  border: none;
+  min-height: 20px;
+  padding: 12px 22px;
+  background-color: var(--cancel-button-default-color);
+
+  &:hover {
+    background-color: var(--cancel-button-hover-color);
+  }
+
+  &:active {
+    background-color: var(--cancel-button-pressed-color);
+  }
+}
+
+mat-form-field {
+  --mdc-outlined-text-field-focus-outline-color: var(--form-field-outline-color);
+}
+
+mat-checkbox {
+  --mdc-checkbox-selected-icon-color: var(--checkbox-selected-color);
+  --mdc-checkbox-selected-hover-icon-color: var(--checkbox-selected-color);
+  --mdc-checkbox-unselected-hover-icon-color: var(--action-icon-button-font-color);
+  --mdc-checkbox-selected-focus-icon-color: var(--checkbox-selected-color);
+  --mdc-checkbox-selected-focus-state-layer-color: var(--checkbox-selected-color);
+  --mdc-checkbox-selected-hover-state-layer-color: var(--checkbox-selected-color);
+  --mdc-checkbox-selected-pressed-state-layer-color: var(--checkbox-selected-color);
+  --mdc-checkbox-selected-pressed-icon-color: var(--checkbox-selected-color);
+  --mdc-checkbox-unselected-icon-color: var(--checkbox-unselected-color);
+  --mdc-checkbox-unselected-focus-state-layer-color: var(--action-icon-button-font-color);;
+  --mdc-checkbox-unselected-hover-state-layer-color: var(--action-icon-button-font-color);;
+  --mdc-checkbox-unselected-pressed-state-layer-color: var(--action-icon-button-font-color);;
+}
+
+.modal-header-text {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+::ng-deep .mdc-dialog .mdc-dialog__content {
+  padding: 20px 34px 0 34px !important;
+}
+
+::ng-deep .mdc-dialog__actions {
+  padding: 26px 34px;
+}

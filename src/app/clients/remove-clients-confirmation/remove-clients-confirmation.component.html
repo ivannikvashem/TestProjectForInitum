@@ -1,0 +1,12 @@
+<mat-dialog-content>
+  <h2 class="modal-header-text">Подтверждение</h2>
+
+  <div class="message-container">
+    Удалить выбранные строки ({{data}}) ?
+  </div>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button class="cancel-btn" (click)="onDismiss()">Отмена</button>
+  <button class="action-btn" (click)="onConfirm()">Удалить</button>
+</mat-dialog-actions>
