@@ -36,8 +36,4 @@ export class EditClientComponent {
   onCancel() {
     this.dialogRef.close();
   }
-
-  getErrors(key:string): boolean {
-    return !this.clientForm.get(key)!.errors;
-  }
 }
