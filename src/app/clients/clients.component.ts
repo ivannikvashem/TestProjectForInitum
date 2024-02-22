@@ -96,11 +96,13 @@ export class ClientsComponent {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      if (result.index == undefined) {
-        result.index = this.dataSource.data.length;
-        this.dataSource.data.push(result)
-        this._localStorageService.setData("Clients", this.dataSource.data);
-        this.table.renderRows()
+      if (result !== undefined) {
+        if (result.index == undefined) {
+          result.index = this.dataSource.data.length;
+          this.dataSource.data.push(result)
+          this._localStorageService.setData("Clients", this.dataSource.data);
+          this.table.renderRows()
+        }
       }
     })
   }
